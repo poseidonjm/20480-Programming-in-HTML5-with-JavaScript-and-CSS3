@@ -34,6 +34,7 @@ export class SpeakerBadgePage {
             // TODO: Add grayscaleImage into the processing pipeline.
             this.readFile(file)
                 .then((file) => this.loadImage(file))
+                .then((file) => grayscaleImage(file))
                 .then((file) => this.drawBadge(file))
                 .then((file) => this.notBusy(file));
         } else {
